@@ -7,6 +7,7 @@
  * @date 11/05/2016
  * @since 11/05/2016
  * @see https://learn.bcit.ca/d2l/le/content/331960/viewContent/2110064/View
+ * @see https://learn.bcit.ca/d2l/le/content/331960/viewContent/2111241/View
  */
 public class Vehicle
 {

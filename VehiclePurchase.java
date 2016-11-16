@@ -5,7 +5,7 @@
  * @author Krzysztof Szczurowski
  * @version 1.1
  * @since 11/16/2016
- * @see
+ * @see https://learn.bcit.ca/d2l/le/content/331960/viewContent/2111241/View
  */
 public class VehiclePurchase
 {
