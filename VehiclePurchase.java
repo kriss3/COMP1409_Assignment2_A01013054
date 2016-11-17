@@ -14,4 +14,12 @@ public class VehiclePurchase
     private Vehicle vehiclePurchased;
     private boolean servicePackage;
     private static final double SERVICE_FEE = 500.00;
+    
+    public VehiclePurchase(Customer renter, PurchaseDate purchaseDate, Vehicle vehiclePurchased,boolean servicePackage)
+    {
+        this.customer = renter;
+        this.purchaseDate = purchaseDate;
+        this.vehiclePurchased = vehiclePurchased;
+        this.servicePackage = servicePackage;
+    }
 }

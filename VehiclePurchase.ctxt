@@ -1,2 +1,4 @@
 #BlueJ class context
-numComments=0
+comment0.params=renter\ purchaseDate\ vehiclePurchased\ servicePackage
+comment0.target=VehiclePurchase(Customer,\ PurchaseDate,\ Vehicle,\ boolean)
+numComments=1

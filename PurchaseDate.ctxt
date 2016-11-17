@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=PurchaseDate()
-comment1.params=theYear\ theMonth\ theDay
-comment1.target=PurchaseDate(int,\ int,\ int)
-numComments=2
+comment0.params=theYear\ theMonth\ theDay
+comment0.target=PurchaseDate(int,\ int,\ int)
+comment1.params=monthValue
+comment1.target=boolean\ isValidMonth(int)
+comment2.params=day
+comment2.target=boolean\ isValidDay(int)
+numComments=3
