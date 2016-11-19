@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Customer here.
+ * Customer class to model a customer;
  * 
  * @author Krzysztof Szczuorowski 
  * @version 1.1

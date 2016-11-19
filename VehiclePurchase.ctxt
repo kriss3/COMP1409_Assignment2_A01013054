@@ -1,4 +1,19 @@
 #BlueJ class context
 comment0.params=renter\ purchaseDate\ vehiclePurchased\ servicePackage
 comment0.target=VehiclePurchase(Customer,\ PurchaseDate,\ Vehicle,\ boolean)
-numComments=1
+comment0.text=\r\n\ Public\ constructor\ method\ for\ PurchaseVehicle\ class;\r\n\ @param\ retner\ as\ Customer;\r\n\ @param\ purchaseDate\ as\ PurchaseDate;\r\n\ @param\ vehiclePurchased\ as\ Vehicle;\r\n\ @param\ servicePackage\ as\ boolean;\r\n
+comment1.params=
+comment1.target=Customer\ getCustomer()
+comment2.params=
+comment2.target=PurchaseDate\ getPurchaseDate()
+comment3.params=
+comment3.target=Vehicle\ getVehiclePurchased()
+comment4.params=
+comment4.target=boolean\ getServicePackate()
+comment5.params=value
+comment5.target=void\ setServicePackage(boolean)
+comment6.params=purchasePrice
+comment6.target=void\ calculatePurchasePrice(double)
+comment7.params=
+comment7.target=void\ displayDetails()
+numComments=8

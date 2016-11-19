@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class PurchaseDate here.
+ * PurchaseDate class to model purchase date
  * 
  * @author Krzysztof Szczurowski 
  * @version 1.1
@@ -15,51 +15,93 @@ public class PurchaseDate
     
     public static final int CURRENT_YEAR = 2016;
     
-    
-   
-    public static final String[] months =  
-        {"Januray","February","March","April","May","June","July","August","September","October","November","December"};
+    public static final int JANUARY =  1;
+    public static final int DECEMBER = 12;
         
     public static final int FIRST_DAY = 1;
     public static final int LAST_DAY = 31;
     
+    /**
+     * Constructor for PurchaseDate class; <br>
+     * It uses setter method to validate input parameters; <br>
+     * 
+     * @param theYear as integer;
+     * @param theMonth as integer;
+     * @param theDay as integer;
+     */
     public PurchaseDate(int theYear, int theMonth, int theDay)
     {
-        if(theYear <= CURRENT_YEAR)
-        {
-            this.year = theYear;
-            if(isValidMonth(theMonth))
-            {
-                this.month = theMonth;
-            }
-            
-            if(isValidDay(theDay))
-            {
-                this.day = theDay;
-            }
-        }
-        
-        
+        setDay(theDay);
+        setMonth(theMonth);
+        setYear(theYear);
     }
     
-    private boolean isValidMonth(int monthValue)
+    /**
+     * Public method to get value of day variable; <br>
+     * It takes no parameters; <br>
+     * @return returns instance variable day as integer;
+     */
+    public int getDay()
     {
-        boolean result = false;
-        if(monthValue >= 1 && monthValue <= 12)
-        {
-            result = true;
-        }
-        return result;
+        return this.day;
     }
     
-    private boolean isValidDay(int day)
+    /**
+     * Public method to set value of day variable; <br>
+     * It does not return any value; <br>
+     * @param takes value to set as integer;
+     */
+    public void setDay(int value)
     {
-        boolean result = true;
-        if(day < FIRST_DAY || day > LAST_DAY)
-        {
-            result = false;
-        }
-        return result;
+       this.day = (value < FIRST_DAY || value > LAST_DAY ? FIRST_DAY : value);
+    }
+    
+    /**
+     * Public method to get value of month variable; <br>
+     * It takes no parameters; <br>
+     * @return returns instance variable month as integer;
+     */
+    public int getMonth()
+    {
+        return this.month;
+    }
+    
+    /**
+     * Public method to set value of month variable; <br>
+     * It does not return any value; <br>
+     * @param takes value to set as integer;
+     */
+    public void setMonth(int value)
+    {
+        this.month = (value < JANUARY || value > DECEMBER ? JANUARY : value);
+    }
+    
+    /**
+     * Public method to get value of year variable; <br>
+     * It takes no parameters; <br>
+     * @return returns instance variable year as integer;
+     */
+    public int getYear()
+    {
+        return this.year;
+    }
+    
+    /**
+     * Public method to set year value, it does not return any value;
+     * @param takes value parameter as integer;
+     */
+    public void setYear(int value)
+    {
+        this.year = (value > CURRENT_YEAR ? CURRENT_YEAR : value);
+    }
+    
+    /**
+     * Public method getDate(), takes no parameters and returns date in a specified format
+     * @return returns full date in a format of yyyy-mm-dd 
+     */
+    public String getDate()
+    {
+        return String.format("%1$04d-%2$02d-%3$02d", year, month, day);
     }
     
 }
