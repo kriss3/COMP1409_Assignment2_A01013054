@@ -22,7 +22,7 @@ public class VehiclePurchase
      * @param vehiclePurchased as Vehicle;
      * @param servicePackage as boolean;
      */
-    public VehiclePurchase(Customer renter, PurchaseDate purchaseDate, Vehicle vehiclePurchased,boolean servicePackage)
+    public VehiclePurchase(Customer renter, PurchaseDate purchaseDate, Vehicle vehiclePurchased, boolean servicePackage)
     {
         this.customer = renter;
         this.purchaseDate = purchaseDate;
@@ -53,17 +53,20 @@ public class VehiclePurchase
     
     public void setServicePackage(boolean value)
     {
+        //asl Gary if we r interesting in recalculating profitMargin ans sellingPrive 
+        //after changing state of Service_Fee?
         this.servicePackage = value;
     }   
     
     public void calculatePurchasePrice(double purchasePrice)
     {
-        double purchasePriceWithServieFee;
-        vehiclePurchased.checkStandardSellingPrice(purchasePrice);
-        if(this.servicePackage)
+        if(!this.servicePackage)
         {
-            purchasePriceWithServieFee = purchasePrice + SERVICE_FEE;
-            vehiclePurchased.checkStandardSellingPrice(purchasePriceWithServieFee);
+            vehiclePurchased.checkStandardSellingPrice(purchasePrice);
+        }
+        else
+        {
+            vehiclePurchased.checkStandardSellingPrice(purchasePrice  + SERVICE_FEE);
         }
     }
     
@@ -76,6 +79,10 @@ public class VehiclePurchase
        if(servicePackage)
        {
            System.out.println("SERVICE PACKAGE INCLUDED");
+       }
+       else
+       {
+           System.out.println("SERVICE PACKAGE NOT INCLUDED");
        }
     }
 }
